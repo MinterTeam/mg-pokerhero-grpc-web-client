@@ -1,0 +1,29 @@
+{
+  "name": "pokerhero-grpc-client",
+  "version": "0.0.1",
+  "description": "JS client to communicate with PokerHero through GRPC",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "/index.js",
+    "/gen/",
+    "/src/"
+  ],
+  "dependencies": {
+    "@bufbuild/protobuf": "^1.3.1",
+    "@connectrpc/connect": "^1.0.0-rc1",
+    "@connectrpc/connect-web": "^1.0.0-rc1"
+  },
+  "devDependencies": {
+    "@bufbuild/protoc-gen-es": "^1.3.1",
+    "@connectrpc/protoc-gen-connect-es": "^1.0.0-rc1",
+    "@protobuf-ts/protoc": "^2.9.1"
+  },
+  "scripts": {
+    "protoc": "./protocgen.sh",
+    "prepublishOnly": "npm run test",
+    "test": "node example/index.js"
+  },
+  "author": "shrpne <shrpne@gmail.com>",
+  "license": "MIT"
+}
